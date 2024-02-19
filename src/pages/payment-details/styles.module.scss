@@ -1,0 +1,247 @@
+@import '../../styles/variables';
+@import '../../styles/fonts';
+$checkbox-size: 20px;
+$checkbox-border: #cecece;
+$checkbox-selected: $primary; // Primary colour
+
+.payment_details_section {
+    padding-top: 0px;
+    padding-bottom: 80px;
+    width: 100%;
+    position: relative;
+
+    div {
+        .main_container {
+            max-width: 1450px;
+            width: 100%;
+            background-color: transparent;
+            position: relative;
+            gap: 1rem;
+            margin: 0 auto;
+            z-index: 1;
+
+            .details_panel {
+                flex-basis: 60%;
+                margin-top: 25px;
+                position: relative;
+                min-height: 500px;
+
+
+                @media (max-width:1100px) {
+                    flex-basis: 65%;
+                }
+
+                @media (max-width:990px) {
+                    flex-basis: 100%;
+                }
+
+                .passenger_details_div {
+                    h2 {
+                        color: #212529;
+                        font-weight: 500;
+                        margin-bottom: 15px;
+                        font-size: 22px;
+                        font-family: $font-jost;
+                    }
+
+                    .return_pas_details_header {
+                        margin-bottom: 40px;
+                    }
+
+                    .passenger_details {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 1.5rem;
+
+                        @media (max-width:768px) {
+                            grid-template-columns: 1fr;
+                        }
+
+                        .input_div {
+                            p {
+                                color: $primary;
+                                padding-left: 10px;
+                                font-size: 14px;
+                                font-weight: 500;
+                                font-family: $font-jost;
+                            }
+
+
+                        }
+
+
+                    }
+                }
+
+                .selected_points_details {
+                    h2 {
+                        color: #212529;
+                        font-weight: 500;
+                        margin-bottom: 15px;
+                        font-size: 22px;
+                        font-family: $font-jost;
+                        padding-top: 30px;
+                    }
+
+                    .selecteditems {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 1rem;
+                        margin-bottom: 1rem;
+
+                        @media (max-width:768px) {
+                            grid-template-columns: 1fr;
+                            display: grid;
+                        }
+
+                        .points {
+                            // border: 1px solid red;
+                            min-height: 70px;
+                            flex: 1;
+
+                            .points_header {
+                                font-size: 16px;
+                                color: rgb(105, 116, 136);
+                                font-weight: 500;
+                                font-family: $font-jost;
+                                margin-bottom: 0px;
+                            }
+
+
+                        }
+
+
+                        .selectedlist_points_left {
+                            z-index: 99999 !important;
+                        }
+
+                        .selectedlist_points_right {
+                            z-index: 11 !important;
+                        }
+                    }
+
+
+                }
+
+                .textarea_div {
+                    margin-top: 1rem;
+                }
+
+                .form_checkbox {
+                    position: relative;
+                    display: block;
+                    margin: 0 0 15px;
+                    user-select: none;
+                    margin-top: 10px;
+
+                    .checkbox {
+                        position: absolute;
+                        opacity: 0;
+                        user-select: none;
+                        cursor: pointer;
+                        font-family: $font-jost;
+
+                        // Text
+                        &+label {
+                            display: inline-block;
+                            position: relative;
+                            cursor: pointer;
+                            line-height: $checkbox-size;
+                            padding-left: $checkbox-size + 10;
+                            font-size: 14px;
+                            font-family: sans-serif;
+                            color: #666; // Label colour
+                            user-select: none;
+
+                            @media (max-width: 460px) {
+                                font-size: 12px;
+                                padding-left: $checkbox-size + 5;
+                            }
+
+                            // Checkbox
+                            &:before {
+                                position: absolute;
+                                display: block;
+                                left: 0;
+                                top: 0;
+                                content: "";
+                                background: transparent;
+                                width: $checkbox-size;
+                                height: $checkbox-size;
+
+                                box-shadow: inset 0 0 0 1px $checkbox-border;
+                                border-radius: 4px;
+                                transition: 200ms ease-in-out all;
+
+                                @media (max-width: 460px) {
+                                    width: 17px;
+                                    height: 17px;
+                                }
+                            }
+
+                            // Tick
+                            &:after {
+                                position: absolute;
+                                display: block;
+                                top: 5px;
+                                left: 5px;
+                                content: "";
+                                width: 9px;
+                                height: 7px;
+                                border-right: 2px solid transparent;
+                                border-bottom: 2px solid transparent;
+                                transform: rotate(45deg);
+
+                                transition: 200ms ease-in-out all;
+
+                                @media (max-width: 460px) {
+                                    width: 6px;
+                                    height: 5px;
+                                }
+                            }
+                        }
+
+                        // Hover
+                        &+label:hover {
+                            color: #333;
+                        }
+
+                        // Focus
+                        &+label:focus {
+                            outline: none;
+                        }
+
+                        // Checked
+                        &:checked {
+                            &+label {
+                                &:before {
+                                    background: $checkbox-selected;
+                                    box-shadow: none;
+                                }
+
+                                &:after {
+                                    border-color: white;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .primary_text {
+                        color: $primary !important;
+
+                    }
+
+                    .red_text {
+                        color: red !important;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+
+}

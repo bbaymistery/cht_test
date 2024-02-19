@@ -1,0 +1,36 @@
+.fleet_content {
+    @media(max-width:850px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro_text {
+        @media(max-width:850px) {
+            display: none !important;
+        }
+    }
+
+    .fleet_title {
+        @media(max-width:850px) {
+            display: none !important;
+        }
+    }
+
+    .title_block2 {
+        @media(max-width:850px) {
+            display: none !important;
+        }
+    }
+
+    .mobile {
+        display: none;
+
+        @media(max-width:850px) {
+            display: block !important;
+
+            p {
+                font-size: 16px !important;
+            }
+        }
+    }
+}

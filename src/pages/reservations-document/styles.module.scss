@@ -1,0 +1,254 @@
+@import '../../styles/_fonts';
+@import '../../styles/variables';
+
+.document_details_section {
+    // border: 1px solid red;
+    max-width: 796px;
+    width: 100%;
+    margin: 0 auto;
+
+
+
+    .first_section {
+        margin: 0 auto;
+        text-align: center;
+
+        .icon_div {
+            background-color: $primary;
+            width: 80px !important;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            @media (max-width:899px) {
+                width: 60px !important;
+                height: 60px;
+
+                i {
+                    color: #fff;
+                    font-size: 22px !important;
+                }
+            }
+
+            i {
+                color: #fff;
+                font-size: 32px;
+            }
+        }
+
+        .succes_message {
+            font-size: 30px;
+            font-family: $font-jost;
+            margin-top: 20px;
+            font-weight: 500;
+            color: $gray-2;
+            margin-bottom: 0px !important;
+
+            @media (max-width:899px) {
+                font-size: 24px;
+            }
+        }
+
+        .succes_message2 {
+            font-size: 28px;
+            font-family: $font-jost;
+            margin-top: 0px;
+            font-weight: 500;
+            color: $gray-2;
+            margin-bottom: 0px !important;
+
+            @media (max-width:899px) {
+                font-size: 22px;
+            }
+        }
+
+        .sub_succes_message {
+            font-family: $font-jost;
+            margin-top: 5px;
+            font-size: 15px;
+            color: $gray-3;
+
+            @media (max-width:899px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .second_section {
+        border: 1px dashed $primary;
+        margin-top: 25px;
+        padding: 15px 50px 35px 50px;
+        border-radius: 15px;
+
+        @media(max-width:700px) {
+            padding: 15px 40px 35px 40px;
+        }
+
+        @media (max-width:540px) {
+            padding: 15px 25px 35px 25px;
+        }
+
+        .title {
+            font-size: 20px;
+            color: $gray-1 ;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-family: $font-jost;
+            text-align: center;
+            margin-bottom: 25px;
+
+            // @media (max-width:899px) {
+            //     font-size: 18px;
+            // }
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+
+            @media(max-width:700px) {
+                flex-direction: column;
+            }
+
+
+            .column_div {
+
+                @media(max-width:700px) {
+                    border-bottom: 1px solid $border-color;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    // display: flex;
+                    // justify-content: space-between;
+                }
+
+                .text1 {
+                    font-size: 17px;
+                    color: $black-1;
+                    font-family: $font-jost;
+                    letter-spacing: 1px;
+
+                    @media (max-width:899px) {
+                        font-size: 16px;
+                    }
+
+                    @media (max-width:490px) {
+                        font-size: 15px;
+                    }
+
+
+                }
+
+                .text2 {
+                    font-size: 18px;
+                    font-family: $font-jost;
+                    color: $primary;
+                    font-weight: 500;
+
+                    @media (max-width:899px) {
+                        font-size: 17px;
+                    }
+
+                    @media (max-width:490px) {
+                        font-size: 16px;
+                    }
+
+                    @media(max-width:420px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .third_section {
+        border: 1px solid $border-color;
+        border-radius: 15px;
+        padding: 15px 50px 5px 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        @media (max-width:540px) {
+            padding: 15px 25px 5px 25px;
+        }
+
+        .title {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: $gray-1 ;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-family: $font-jost;
+
+            text-align: center;
+
+            @media (max-width:540px) {}
+        }
+
+        div {
+            .return_journey_text {
+                margin-bottom: 10px;
+                margin-top: 20px;
+                font-size: 20px;
+                color: $gray-1 ;
+                font-weight: 500;
+                font-family: $font-jost;
+                letter-spacing: 1px;
+            }
+        }
+
+        .passenger_info {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $border-color;
+            font-family: $font-jost;
+            padding: 12px 0px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .left {
+                color: $black-2;
+                font-weight: 400;
+
+                @media (max-width:490px) {
+                    font-size: 15px;
+                }
+
+            }
+
+            .right {
+                font-size: 17px;
+                font-weight: 500;
+                color: $primary;
+
+                @media (max-width:490px) {
+                    font-size: 16px;
+                }
+
+                @media(max-width:420px) {
+                    font-size: 13px;
+                }
+            }
+
+        }
+    }
+
+    .btn_div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width:767px) {}
+
+        button {
+            border-radius: 15px !important;
+        }
+
+
+    }
+}

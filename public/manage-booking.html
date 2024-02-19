@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" rel="preload"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"
+    rel="preload"></script>
+  <title>Manage Booking</title>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-color: unset !important;
+    }
+  </style>
+  <script>
+    var process = { env: {} };
+  </script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" rel="preload" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" rel="preload" crossorigin></script>
+  <script src="https://api.london-tech.com/api/v1/reservation/edit/manage-booking-tool/script.js?channelId=8"
+    rel="preload"></script>
+</head>
+
+<body>
+  <div style="width:100%;height:100vh;overflow: auto;margin:0 auto;" id="manageBookingDemo"></div>
+  <script>
+    (() => {
+      var manageBooking = new ManageBooking('manageBookingDemo', {})
+      manageBooking.render();
+      manageBooking.onRender(() => {
+        console.log('rendered')
+      })
+    })()
+  </script>
+</body>
+
+</html>

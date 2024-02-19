@@ -1,0 +1,25 @@
+    .booking_form_hour_minute_wrapper {
+        max-width: 145px;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+
+        @media (max-width: 1020px) {
+            max-width: 308px;
+        }
+
+        select {
+            padding: 10px;
+        }
+
+        i {
+            position: absolute;
+            right: 12px;
+            top: 15px;
+            font-size: 15px;
+            color: #bbbbbb;
+            z-index: 0;
+            pointer-events: none;
+
+        }
+    }

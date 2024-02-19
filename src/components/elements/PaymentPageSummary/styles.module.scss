@@ -1,0 +1,315 @@
+    @import '../../../styles/variables';
+    @import '../../../styles/fonts';
+
+    .journey_summary_panel {
+        position: relative;
+
+        .content {
+            padding: 20px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            border: 1px dashed $border-color;
+            border-radius: 4px;
+            font-size: 15px;
+            position: sticky;
+            top: 51px;
+
+            h3 {
+                margin-bottom: 8px;
+                font-size: 20px;
+                font-weight: 500;
+                font-family: $font-jost;
+                text-align: center;
+            }
+
+            .journey_card {
+                display: flex;
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 13px;
+
+                @media (max-width: 819px) {
+                    flex-direction: column;
+                }
+
+                .passsenger_details_div {
+                    padding: 5px 0px;
+                    flex: 1;
+
+                    h5 {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.2;
+                        font-family: $font-jost;
+                        color: rgb(5 16 54 / 54%);
+                        margin-bottom: 2px;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 3px;
+                        text-transform: uppercase;
+
+                        i {
+                            margin-right: 6px;
+                            font-size: 10px;
+                        }
+                    }
+
+
+                    .space {
+                        margin-bottom: 5px;
+                    }
+
+                    li {
+                        font-size: 14px;
+                        margin-bottom: 0px;
+                        font-weight: 500;
+                        font-family: $font-jost;
+                        // list-style: disc;
+                        list-style: none;
+                        border-bottom: 1px solid $border-color;
+                        margin-bottom: 15px;
+                        color: $dark-1;
+
+                        &:last-child {
+                            margin-bottom: 0px;
+                            border-bottom: none;
+                        }
+                    }
+
+                    li span {}
+                }
+
+
+                .img_div {
+                    padding: 10px 7.5px;
+                    flex: 0.5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5px;
+                    // border: 1px solid #efefef;
+                    border: none;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 130%;
+                    border-left-color: transparent;
+                    border-right-color: transparent;
+                    border-top-color: transparent;
+
+                    @media (max-width: 990px) {
+                        background-size: 160%;
+                    }
+
+                    @media (max-width: 819px) {
+                        padding: 70px 0px;
+                        background-size: 50%;
+                    }
+
+                    @media (max-width: 600px) {
+                        padding: 70px 0px;
+                        background-size: 65%;
+                    }
+
+                    @media (max-width: 500px) {
+                        padding: 70px 0px;
+                        background-size: 75%;
+                    }
+
+                    @media (max-width: 400px) {
+                        background-size: 85%;
+                    }
+
+                    @media (max-width: 390px) {
+                        background-size: 95%;
+                    }
+                }
+
+                .details_div {
+                    flex: 1;
+                    padding: 5px 10px;
+
+                    @media (max-width: 819px) {
+                        padding: 5px 0px;
+                    }
+
+                    h5 {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.2;
+                        font-family: $font-jost;
+                        // color: rgb(5, 16, 54);
+                        color: rgb(5 16 54 / 54%);
+                        margin-bottom: 2px;
+                        text-transform: uppercase;
+                    }
+
+
+                    .space {
+                        margin-bottom: 15px;
+                    }
+
+                    li {
+                        font-size: 14px;
+                        margin-bottom: 0px;
+                        font-weight: 500;
+                        font-family: $font-jost;
+                        // list-style: disc;
+                        list-style: none;
+                        border-bottom: 1px solid $border-color;
+                        margin-bottom: 15px;
+                        color: $dark-1;
+
+                        &:last-child {
+                            margin-bottom: 0px;
+                            border-bottom: none;
+                        }
+                    }
+
+                    li span {
+                        @media (max-width: 400px) {
+                            font-size: 13px;
+                        }
+                    }
+
+
+
+                }
+            }
+
+            .total_journey {
+                padding-top: 13px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                border-bottom: 1px solid $border-color;
+
+                .text_1 {
+                    font-size: 13px;
+                    font-family: $font-jost;
+                    font-weight: 400;
+                    color: rgba(5, 16, 54, 0.54);
+                    line-height: 28px;
+
+                    text-transform: uppercase;
+                }
+
+                .duration {
+                    font-size: 16px;
+                    font-family: $font-jost;
+                    font-weight: 500;
+                    line-height: 30px;
+                    color: rgb(5, 16, 54);
+                    display: flex;
+                    justify-content: space-between;
+
+                    @media(max-width:400px) {
+                        font-size: 14px;
+                    }
+
+                    span:nth-child(2) {
+                        font-weight: 400;
+                        font-size: 15px;
+
+                        @media(max-width:400px) {
+                            font-size: 14px;
+                        }
+                    }
+
+                }
+
+
+
+
+            }
+
+            .you_selected_div {
+                padding-top: 13px;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid $border-color;
+                // flex-direction: column;
+
+                .left {
+                    .text_1 {
+                        font-size: 14px;
+                        font-family: $font-jost;
+                        font-weight: 400;
+                        // color: rgb(5, 16, 54);
+                        line-height: 28px;
+                        color: rgba(5, 16, 54, 0.54);
+                        text-transform: uppercase;
+
+
+                    }
+
+                    .car_name {
+
+                        font-size: 16px;
+                        font-family: $font-jost;
+                        font-weight: 500;
+                        line-height: 30px;
+                        color: rgb(5, 16, 54);
+
+                        @media(max-width:400px) {
+                            font-size: 14px;
+                            // background-color: red;
+                        }
+                    }
+
+                    a {
+                        color: rgb(53, 84, 209);
+                        font-weight: 400;
+                        font-family: $font-jost;
+                        line-height: 28px;
+                        text-decoration: underline;
+                        font-size: 15px;
+
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        // text-align: center;
+                        font-weight: 400;
+                        font-family: $font-jost;
+                        line-height: 28px;
+                        font-size: 14px;
+                        color: rgb(5, 16, 54);
+
+                        i {
+                            font-size: 14px;
+                        }
+
+                        &:nth-child(2) {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            .price_div {
+                background-color: red;
+                display: flex;
+                justify-content: space-between;
+                color: #212529;
+                font-family: $font-jost;
+                padding: 16px 18px;
+                font-size: 18px;
+                background-color: #E5F0FD;
+                margin-top: 15px;
+                border-radius: 4px;
+
+                .text_1 {
+                    font-weight: 500;
+                }
+
+                .price {
+                    font-weight: 600;
+                }
+            }
+        }
+    }

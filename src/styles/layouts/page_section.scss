@@ -1,0 +1,27 @@
+//!bunnan sonraki projelerde bu sekilde kullanicaz
+.page {
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    .page_section {
+        margin: 0 var(--window-margin);
+
+        .page_section_container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+
+            @media (max-width:1200px) {
+                padding: 0px 0px;
+                max-width: 970px;
+            }
+
+            @media (max-width:990px) {
+                max-width: 750px;
+                padding: 0px 0px;
+            }
+        }
+
+    }
+}

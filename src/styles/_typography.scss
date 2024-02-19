@@ -1,0 +1,82 @@
+@import './variables';
+
+
+* {
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-montserrat;
+    color: $black-1;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 28px;
+
+    @media (max-width:468px) {
+        font-size: 21px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 23.66px;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

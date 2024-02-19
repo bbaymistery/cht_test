@@ -1,0 +1,96 @@
+@import '../../../styles/fonts';
+@import '../../../styles/variables';
+
+
+
+// .content_div {
+//     border-radius: 0px;
+//     position: absolute;
+//     width: 650px;
+//     padding: 0px 0px 14px;
+//     top: -300px;
+//     left: 289px;
+//     border: 3px solid $primary;
+//     border-radius: 4px;
+//     background-color: #fff;
+//     padding: 5px;
+//     // display: none;
+
+//     &::after {
+
+//         content: " ";
+//         left: -3px;
+//         position: absolute;
+//         border: 9px solid $primary;
+//         border-bottom-color: transparent;
+//         border-right-color: transparent;
+
+//         bottom: -18px;
+//     }
+
+//     p {
+//         font-size: 14px;
+//         font-family: $font-jost;
+//         font-weight: 400;
+//         margin-bottom: 10px;
+
+//         .primary_text {
+//             font-weight: 500;
+//             color: $primary;
+//             font-family: $font-jost;
+//         }
+//     }
+
+//     &[showmodal="true"] {
+//         display: block;
+
+//     }
+// }
+
+
+@import '../../../styles/fonts';
+@import '../../../styles/variables';
+
+.content_div {
+    // border-radius: 0px;
+    // position: absolute;
+    // width: 650px;
+    // padding: 0px 0px 14px;
+    // top: -310px;
+    // right: -652.5px;
+    // z-index: 6000;
+    // border: 3px solid $primary;
+    // border-radius: 4px;
+    // background-color: #fff;
+    // padding: 5px;
+    // // display: none;
+
+
+
+    // &::after {
+    //     content: " ";
+    //     left: -3px;
+    //     position: absolute;
+    //     border: 9px solid $primary;
+    //     border-bottom-color: transparent;
+    //     border-right-color: transparent;
+    //     bottom: -18px;
+    // }
+
+    // p {
+    //     font-size: 14px;
+    //     font-family: $font-jost;
+    //     font-weight: 400;
+    //     margin-bottom: 10px;
+
+    //     .primary_text {
+    //         font-weight: 500;
+    //         color: $primary;
+    //         font-family: $font-jost;
+    //     }
+    // }
+
+    // &[showmodal="true"] {
+    //     // display: block;
+    // }
+}

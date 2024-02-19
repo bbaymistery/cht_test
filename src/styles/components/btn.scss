@@ -1,0 +1,75 @@
+@use "../variables" as *;
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    background-image: none;
+    // border-radius: 4px;
+    transition: $tr-ease;
+
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    cursor: pointer;
+
+    border-radius: 30px;
+
+}
+
+.btn_primary {
+    color: #fff;
+    background-color: $primary;
+    border-color: darken($primary, 2%);
+
+    &:hover {
+        background-color: darken($primary, 8%);
+    }
+}
+
+// .btn_darkPrimary {
+//     color: #fff;
+//     background-color: $darkPrimary;
+//     border-color: darken($darkPrimary, 2%);
+
+//     &:hover {
+//         background-color: lighten($darkPrimary, 5%);
+//     }
+// }
+
+.btn_hover_reverse_primary {
+    color: #fff;
+    background-color: $primary;
+    border-color: darken($primary, 2%);
+
+    &:hover {
+        background-color: darken($primary, 5%);
+        background-color: white;
+        color: $primary;
+    }
+}
+
+.btn_success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+
+    &:hover {
+        color: #fff;
+        background-color: #398439;
+        border-color: #255625;
+    }
+}

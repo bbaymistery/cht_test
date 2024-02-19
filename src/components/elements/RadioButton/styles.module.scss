@@ -1,0 +1,49 @@
+     //radio buttons and Its text
+     .radio_text_header_ul {
+         li {
+             span {
+                 display: block;
+                 float: left;
+                 width: calc(100%);
+                 padding: 25px 30px;
+                 color: #fff;
+                 text-align: center;
+                 background: #4e7ac7;
+                 position: relative;
+
+                 &::after {
+                     width: 0px;
+                     height: 0px;
+                     border-left: 15px solid transparent;
+                     border-right: 15px solid transparent;
+                     display: block;
+                     content: '';
+                     position: absolute;
+                     bottom: -15px;
+                     left: calc(50% - 15px);
+                     border-top: 15px solid #4e7ac7;
+                 }
+
+             }
+         }
+     }
+
+     .radio_button_div {
+         background-color: #1c1c1c;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-top: 25px;
+         padding: 10px;
+         padding-top: 35px;
+         color: white;
+
+         label,
+         input {
+             cursor: pointer;
+         }
+
+         label {
+             margin-left: 5px;
+         }
+     }

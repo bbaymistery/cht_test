@@ -1,0 +1,195 @@
+@import '../../styles/_fonts';
+@import '../../styles/variables';
+
+.document_details_section_pdf {
+    // border: 1px solid red;
+    min-width: 796px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 796px;
+    // opacity: 0;
+
+    .first_section {
+        margin: 0 auto;
+        text-align: center;
+
+        .icon_div {
+            background-color: $primary;
+            width: 80px !important;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            i {
+                color: #fff;
+                font-size: 32px;
+            }
+        }
+
+        .succes_message {
+            font-size: 30px;
+            font-family: $font-jost;
+            margin-top: 20px;
+            font-weight: 500;
+            color: $gray-2;
+            margin-bottom: 0px !important;
+
+        }
+
+        .succes_message2 {
+            font-size: 28px;
+            font-family: $font-jost;
+            margin-top: 0px;
+            font-weight: 500;
+            color: $gray-2;
+            margin-bottom: 0px !important;
+
+        }
+
+        .sub_succes_message {
+            font-family: $font-jost;
+            margin-top: 5px;
+            font-size: 15px;
+            color: $gray-3;
+
+        }
+    }
+
+    .second_section {
+        border: 1px dashed $primary;
+        margin-top: 25px;
+        padding: 15px 50px 35px 50px;
+        border-radius: 15px;
+
+
+
+        .title {
+            font-size: 20px;
+            color: $gray-1 ;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-family: $font-jost;
+            text-align: center;
+            margin-bottom: 25px;
+
+
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+
+
+
+            .column_div {
+
+                @media(max-width:700px) {
+                    border-bottom: 1px solid $border-color;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    // display: flex;
+                    // justify-content: space-between;
+                }
+
+                .text1 {
+                    font-size: 17px;
+                    color: $black-1;
+                    font-family: $font-jost;
+                    letter-spacing: 1px;
+
+
+
+                }
+
+                .text2 {
+                    font-size: 18px;
+                    font-family: $font-jost;
+                    color: $primary;
+                    font-weight: 500;
+
+
+                }
+            }
+        }
+    }
+
+    .third_section {
+        border: 1px solid $border-color;
+        border-radius: 15px;
+        padding: 15px 50px 5px 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+
+        .title {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: $gray-1 ;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-family: $font-jost;
+
+            text-align: center;
+
+        }
+
+        div {
+            .return_journey_text {
+                margin-bottom: 10px;
+                margin-top: 20px;
+                font-size: 20px;
+                color: $gray-1 ;
+                font-weight: 500;
+                font-family: $font-jost;
+                letter-spacing: 1px;
+            }
+        }
+
+        .passenger_info {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $border-color;
+            font-family: $font-jost;
+            padding: 12px 0px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .left {
+                color: $black-2;
+                font-weight: 400;
+
+
+
+            }
+
+            .right {
+                font-size: 17px;
+                font-weight: 500;
+                color: $primary;
+
+
+            }
+
+        }
+    }
+
+    .btn_div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+
+        button {
+            border-radius: 15px !important;
+        }
+
+
+    }
+}

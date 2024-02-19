@@ -1,0 +1,74 @@
+.popup_module_container[f="true"] {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 10000;
+    animation: toptobottom;
+    opacity: 1;
+    animation-duration: 0.65s;
+    animation-fill-mode: both;
+    animation-delay: .18s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+
+}
+
+.popup_module_container[f="false"] {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    transition: 0.5s linear;
+    animation: bottomtotop;
+    opacity: 0;
+    animation-duration: .65s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    display: none;
+}
+
+@keyframes toptobottom {
+    0% {
+        opacity: 0;
+
+        height: 0vh;
+    }
+
+    10% {
+        opacity: 0;
+        // transform: scale(.5);
+        height: 0vh;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        height: 100vh;
+
+    }
+}
+
+@keyframes bottomtotop {
+    0% {
+        opacity: 1;
+
+        height: 100vh;
+    }
+
+
+
+    100% {
+        opacity: 0;
+        height: 0vh;
+
+    }
+}

@@ -1,0 +1,252 @@
+@import './variables';
+
+@keyframes input_icon_animation {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+
+
+
+    50% {
+        transform: translateX(3px);
+        // transform: scale(1.2);
+        opacity: .5;
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(3px);
+        // transform: scale(1.2);
+    }
+}
+
+//*
+.fade_left {
+    transition: .5s ease-in-out;
+    animation: fade_left;
+    opacity: 1;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fade_left {
+    0% {
+        opacity: 0;
+
+        transform: translateX(-500px);
+
+    }
+
+    10% {
+        opacity: 0;
+        transform: translateX(-500px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+
+.fade_right {
+    transition: .5s ease-in-out;
+    animation: fade_right;
+    opacity: 1;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fade_right {
+    0% {
+        opacity: 0;
+
+        transform: translateX(500px);
+
+    }
+
+    10% {
+        opacity: 0;
+        transform: translateX(500px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+
+//* (sonda ozu asagi dusur yox olur
+.fade_bottom_to_top_hidden {
+    animation: bottom_to_top_hidden;
+    opacity: 1;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+//manage bookingde aalert olarag elemisdik
+@keyframes bottom_to_top_hidden {
+    0% {
+        bottom: -40px;
+        opacity: 0;
+    }
+
+    40% {
+        bottom: 25px;
+        opacity: 1;
+    }
+
+    60% {
+        bottom: 25px;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: -40px;
+        opacity: 0;
+    }
+}
+
+//*
+.zoom_in {
+    animation-name: zoom_in;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes zoom_in {
+    0% {
+        opacity: 0;
+        transform: scale(1.25);
+    }
+
+    10% {
+        opacity: 0;
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.zoom_out {
+    animation-name: zoom_out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes zoom_out {
+    0% {
+
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade_up {
+    transition: 0.5s ease-in-out;
+    animation: fadeUp;
+    opacity: 1;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        top: 30px;
+    }
+
+    10% {
+        opacity: 0;
+        top: 30px;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.appear {
+    opacity: 0;
+    animation: 1s appear forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.slideInXNegative {
+    animation: 0.5s slideInXNegative forwards;
+    animation-delay: 0.5;
+}
+
+@keyframes slideInXNegative {
+    0% {
+        transform: translateX(-5%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shrink {
+    animation: 0.5s shrink forwards,
+}
+
+@keyframes shrink {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.expand {
+    animation: 0.5s expand forwards,
+}
+
+@keyframes expand {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

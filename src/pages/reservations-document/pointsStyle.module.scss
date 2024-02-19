@@ -1,0 +1,90 @@
+@import '../../styles/fonts';
+@import '../../styles/variables';
+
+.details {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    border-bottom: 1px solid #efefef;
+    padding: 12px 0px;
+
+    .details_bottom_container {
+        // margin-bottom: 20px;
+
+        .details_header_div {
+            font-family: $font-jost;
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width:700px) {
+                flex-direction: column;
+            }
+
+            .left {
+                color: $black-2;
+                font-weight: 400;
+
+                @media (max-width:490px) {
+                    font-size: 15px;
+                }
+            }
+
+            .point_adress {
+                color: $primary;
+                font-weight: 500;
+                font-size: 17px;
+
+                @media (max-width:490px) {
+                    font-size: 16px;
+                }
+
+                @media(max-width:420px) {
+                    font-size: 13px;
+                }
+            }
+        }
+
+
+        .details_bottom_description {
+            display: flex;
+            letter-spacing: 1px;
+            font-size: 14px;
+            color: $light-1;
+            font-family: $font-jost;
+            font-weight: 500;
+            align-items: center;
+            justify-content: flex-end;
+
+            @media (max-width:700px) {
+                justify-content: flex-start;
+            }
+
+            span {
+                &:nth-child(2) {
+                    text-decoration: underline;
+                }
+            }
+
+            i {
+                font-size: 4px;
+                font-weight: bold;
+                color: rgb(3, 3, 3);
+            }
+
+            .bottom_main_desc {
+                padding-left: 6px;
+
+                @media(max-width:700px) {
+                    padding-left: 0px;
+                    // background-color: red;
+                }
+
+                @media(max-width:420px) {
+                    font-size: 12px;
+                    // background-color: red;
+                }
+            }
+
+        }
+    }
+}

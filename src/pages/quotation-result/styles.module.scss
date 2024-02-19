@@ -1,0 +1,391 @@
+@import '../../styles/variables';
+@import '../../styles/_fonts';
+
+//we eliminated this class on styles.css
+// .main-content ul li:before {
+// }
+.quotation_section {
+    padding-top: 0px;
+    padding-bottom: 80px;
+    width: 100%;
+
+    .return_details_title {
+        text-align: center;
+        margin-top: 2rem;
+        color: black;
+        font-weight: bold;
+        font-size: 26px;
+    }
+
+    .main_container {
+        max-width: 1450px;
+        width: 100%;
+        display: flex;
+        background-color: transparent;
+        position: relative;
+        gap: 1rem;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        // border: 1px solid rgba(255, 0, 0, 0.18);
+        @media (max-width: 990px) {
+            // align-items: center;
+            // justify-content: center;
+            flex-direction: column;
+        }
+
+        //quotation search panel css u can find on quotationSearchPanel Component
+        .quotation_panel {
+            flex-basis: 35%;
+            margin-top: 16px;
+            position: relative;
+
+            @media (max-width: 990px) {
+                display: none;
+            }
+
+            .form_div {
+                padding: 5px 20px;
+                padding-bottom: 20px;
+                border: 1px solid $border-color;
+                border-radius: 4px;
+                font-size: 15px;
+                position: sticky;
+                top: 51px;
+
+                .errorBookedMessage {
+                    p {
+                        color: red;
+                        margin-top: 15px;
+                        font-size: 14px !important;
+                    }
+                }
+
+                .search_menu {
+                    padding: 20px 0px;
+                    border-bottom: 1px solid $border-color;
+                    padding-bottom: 7px;
+
+                    h4 {
+                        font-weight: 500;
+                        line-height: 1.6;
+                        font-family: $font-jost;
+                        text-transform: none;
+                        color: $light-1;
+
+                        font-size: 15px;
+                        margin-bottom: 5px !important;
+                    }
+
+                    .input_div {
+                        color: $light-1;
+                        line-height: 1.6;
+                        font-size: 15px;
+                        font-family: $font-jost;
+                        position: relative;
+
+                        .input_delete_field_icon {
+                            position: absolute;
+                            right: 9px;
+                            top: 7px;
+                            cursor: pointer;
+                            color: red;
+                        }
+
+                        input {
+                            border: 0;
+                            outline: none;
+                            width: 100%;
+                            background-color: transparent;
+                            color: $dark-1;
+                            outline-offset: -2px;
+                            font-weight: 500;
+                            font-family: $font-jost;
+                            position: relative;
+
+                            &::placeholder {
+                                color: $light-1;
+                                font-weight: 400;
+                            }
+                        }
+
+                        // background-color: red;
+                        input[type="date"]:after {
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            content: "\f073";
+                            top: 15px;
+                            right: 15px;
+                            font-size: 14px;
+                            user-select: none;
+                            color: #5d646d;
+                            position: absolute;
+
+                        }
+
+                        input[type="date"] {
+                            position: relative;
+                            text-align: left;
+                            min-width: 100%;
+                            max-width: 100%;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            min-height: 53.6px !important;
+                            height: 53.6px !important;
+                            background-color: rgb(255, 255, 255);
+                            -webkit-border-radius: 0;
+                            -webkit-width: 100%
+                        }
+
+
+
+                        /* change color of symbol on hover */
+                        input[type="date"]:hover:after {
+                            //  color: #bf1400;
+                        }
+
+                        /* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+                        input[type="date"]::-webkit-calendar-picker-indicator {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            width: auto;
+                            height: auto;
+                            color: transparent;
+                            background: transparent;
+                            user-select: none;
+
+                        }
+
+                        /* adjust increase/decrease button */
+                        input[type="date"]::-webkit-inner-spin-button {
+                            z-index: 1;
+
+                        }
+
+                        /* adjust clear button */
+                        input[type="date"]::-webkit-clear-button {
+                            z-index: 1;
+                        }
+
+                        //iphonelarda 2 aralik 2022 ni ortaliyan budur
+                        input::-webkit-date-and-time-value {
+                            text-align: left;
+                            text-align: -webkit-left;
+                            // background-color: rgb(0, 255, 191) !important;
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                        }
+
+                        input[type="date"]::-webkit-datetime-edit,
+                        input[type="date"]::-webkit-inner-spin-button,
+                        input[type="date"]::-webkit-clear-button {
+                            color: rgb(253, 253, 253);
+                            position: relative;
+                            left: 0px;
+                            text-align: left;
+                        }
+
+                        input[type="date"]::-webkit-datetime-edit-year-field {
+                            position: absolute !important;
+                            border-left: 1px solid #8c8c8c2f;
+                            padding: 2px 7px;
+                            color: #000;
+                            left: 56px;
+                        }
+
+                        input[type="date"]::-webkit-datetime-edit-month-field {
+                            position: absolute !important;
+                            border-left: 1px solid #8c8c8c2f;
+                            padding: 2px 7px;
+                            color: rgb(0, 0, 0);
+                            left: 26px;
+                        }
+
+
+                        input[type="date"]::-webkit-datetime-edit-day-field {
+                            position: absolute !important;
+                            color: #000;
+                            padding: 2px 0px;
+                            left: 4px;
+
+                        }
+
+                        input::-webkit-datetime-edit-day-field:focus,
+                        input::-webkit-datetime-edit-month-field:focus,
+                        input::-webkit-datetime-edit-year-field:focus {
+                            background-color: rgb(12, 155, 243);
+                            color: white;
+                            outline: none;
+                        }
+
+
+                    }
+
+                    .add_point_div {
+                        display: flex;
+                        align-items: center;
+                        padding: 2px 10px;
+                        // margin-bottom: 1rem;
+                        color: $light-1;
+                        transition: .2s ease;
+
+                        .add_point_icon {
+                            font-size: 14px;
+                            margin-right: 0.70rem;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            color: darken($light-1, 22%);
+                        }
+                    }
+
+                }
+
+                .select_time_div {
+                    display: flex;
+                    position: relative;
+                    gap: 1.5rem;
+                    padding-top: 20px;
+                    padding-bottom: 10px;
+
+                    .booking_form_hour_minute_wrapper {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            right: 12px;
+                            top: 44px;
+                            // color: #bbb;
+                            z-index: 0;
+                            pointer-events: none;
+                            color: darken($dark-1, 5%);
+                            font-size: 14px;
+
+                        }
+
+                        label {
+                            color: $light-1;
+                            font-weight: 500;
+                            line-height: 1.6;
+                            font-family: $font-jost;
+                            margin-bottom: 5px;
+                            font-size: 15px;
+                        }
+
+                        select {
+                            width: calc(100%);
+                            padding: 12px 12px;
+                            background: transparent;
+                            border: none;
+                            font-size: 16px;
+                            color: darken($dark-1, 5%);
+                            margin: 0;
+                            font-weight: 500;
+                            font-family: $font-jost;
+                            border-bottom: 1px solid $border-color;
+                            -webkit-appearance: none;
+                            font-size: 14px;
+
+                            &:focus {
+                                outline: none !important;
+                            }
+                        }
+                    }
+
+                }
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4px !important;
+                    width: 100%;
+                    font-weight: 600;
+                    font-size: 18px;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        //here is result uotaion container which all cars
+
+        .items_buttons {
+            position: absolute;
+            right: 0px;
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            bottom: -62px;
+            padding-right: 1rem;
+
+            :nth-child(2) {
+                margin-left: 2rem;
+            }
+
+            @media (max-width: 820px) {
+                justify-content: space-between;
+            }
+
+            button {
+                letter-spacing: 0.4px;
+                font-size: 15px;
+                padding: 0px 16px;
+                line-height: 37px;
+                transition: all 0.3s;
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+                font-weight: 500;
+                position: relative;
+                display: inline-block;
+                border: 1px solid $primary;
+                width: 100%;
+                color: $primary !important;
+                background-color: white !important;
+                transition: .5s ease;
+
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+
+                @media (max-width: 450px) {
+                    font-size: 13px;
+                    padding: 0px 15px;
+                    line-height: 29px;
+
+                }
+
+
+                &:hover {
+                    box-shadow: none !important;
+                    transition: .5s ease;
+                }
+
+            }
+        }
+
+        .location_names_for_mobile {
+            display: none;
+
+            @media (max-width: 990px) {
+                display: block;
+            }
+
+            .point_title {
+                color: rgb(74, 73, 73);
+                margin-bottom: 0.75rem;
+
+            }
+        }
+    }
+
+}

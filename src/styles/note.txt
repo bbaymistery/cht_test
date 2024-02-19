@@ -1,0 +1,4 @@
+pb_1=> 1rem
+pb_2 => 1.5 rem
+pb_3 =>2rem
+seklinde classlari guncellemen lazim

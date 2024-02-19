@@ -1,0 +1,87 @@
+.ui-autocomplete {
+  background: #fff;
+  max-height: 270px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+  position: absolute;
+}
+
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+  height: 100px;
+}
+
+.header-booking-form-wrapper .ui-autocomplete,
+.widget-booking-form-wrapper .ui-autocomplete {
+  width: calc(100% - 61px);
+}
+
+.ui-autocomplete-loading {
+  background: white url("/images/ui-anim_basic_16x16.gif");
+  background-repeat: no-repeat;
+  background-position: 98% center;
+
+}
+
+
+.ui-autocomplete-category {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #ffe8a0;
+  min-height: 16px;
+  display: flex;
+  padding: 13px !important;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  text-transform: uppercase;
+  /* cursor: pointer; */
+  font-weight: bold;
+}
+
+.ui-autocomplete-no-result {
+  background: #ffa0a0 !important;
+  min-height: 39px !important;
+  font-weight: 700;
+}
+
+.ui-autocomplete .ui-menu-item {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #fff;
+  min-height: 16px;
+  line-height: 20px;
+  padding: 13px !important;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+}
+
+.ui-autocomplete .ui-menu-item:hover {
+  background: #e8e8e8;
+}
+
+.ui-autocomplete .ui-menu-item>span>i {
+  color: #ccc;
+}
+
+.blockMsg {
+  padding: 15px !important;
+  border: 1px solid #e0e0e0 !important;
+  font-size: 14px;
+}
+
+.blockMsg h1 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable:not(.ui-datepicker-other-month) {
+  background: #333;
+  background-color: #333;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 28px, rgba(255, 255, 255, .5) 30px, rgba(255, 255, 255, .5) 30px);
+}

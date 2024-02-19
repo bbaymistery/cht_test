@@ -1,0 +1,75 @@
+@import '../../../styles/variables';
+@import '../../../styles/fonts';
+
+.form_input {
+    position: relative;
+    display: flex;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+
+    .form_input_error {
+        position: absolute;
+        right: 5px;
+        top: -21px;
+        color: red !important;
+        font-size: 13px;
+        font-weight: normal !important;
+    }
+
+    .p {
+        display: none;
+    }
+
+    .label {
+        position: absolute;
+        pointer-events: none;
+        top: 13px;
+        font-size: 13px;
+        padding: 0px 15px;
+        transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+        font-family: $font-jost;
+        color: rgba(105, 116, 136, 0.579);
+    }
+
+    .input {
+        width: 100%;
+        min-height: 54px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        padding: 17px 15px 0px 15px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $font-jost;
+        color: #62666cd7;
+
+        @media (max-width: 520px) {
+            font-size: 13px;
+        }
+
+        &:focus~label,
+        &:valid~label {
+            margin-top: -10px;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &[err="true"] {
+            border-color: red;
+        }
+    }
+
+
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

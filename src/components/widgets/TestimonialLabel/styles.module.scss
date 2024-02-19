@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+@import '../../../styles/fonts';
+
+.testimonial {
+    .container {
+        min-height: 130px;
+        height: 100%;
+        margin: 0 var(--window-margin);
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 29px;
+            color: $gray-1;
+            font-family: $font-jost;
+
+            @media(max-width:480px) {
+                font-size: 23px;
+            }
+                         @media(max-width:380px) {
+                             font-size: 21px;
+                         }
+        }
+    }
+}

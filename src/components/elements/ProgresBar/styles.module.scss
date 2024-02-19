@@ -1,0 +1,127 @@
+.section {
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+    .dot {
+      display: inline-block;
+      font-size: 250%;
+    }
+
+    .dot:nth-child(1) {
+      animation: dots .5s infinite alternate linear;
+    }
+
+    .dot:nth-child(2) {
+      animation: dots 1s infinite alternate linear;
+    }
+
+    .dot:nth-child(3) {
+      animation: dots 1.5s infinite alternate linear;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h1 sub {
+      margin-left: 5%;
+      font-size: 15%;
+      font-weight: normal;
+    }
+
+    .progress_bar {
+      margin: auto;
+      width: 450px;
+      max-width: 80%;
+      height: 10px;
+      box-shadow: 0px 0px 4px #ffffffd1;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+
+      @media (max-width:500px) {
+        width: 350px !important;
+        height: 10px !important;
+      }
+
+      @media (max-width:400px) {
+        width: 300px !important;
+        height: 10px !important;
+      }
+    }
+
+    .progress_bar:before {
+      content: "";
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      animation: progress-anime 5s linear infinite;
+      background: linear-gradient(to right,
+          #24f2f2 0%,
+          #089dbe 50%,
+          #157fe3 50%,
+          #2720ed 100%);
+
+
+    }
+  }
+}
+
+@keyframes progress-anime {
+  0% {
+    left: -100%;
+  }
+
+  75% {
+    left: -5%;
+  }
+
+  85% {
+    left: -5%;
+  }
+
+  95% {
+    left: 0;
+  }
+}
+
+@keyframes dots {
+  // 20% {
+  //   color: #24f2f2;
+  //   transform: translate(0, -2%);
+  // }
+
+  // 50% {
+  //   color: #089dbe;
+  //   transform: translate(0, -5%);
+  // }
+
+  // 75% {
+  //   color: #157fe3;
+  //   transform: translate(0, -10%);
+  // }
+
+  // 100% {
+  //   color: #4e7ac7;
+  //   transform: translate(0, 0);
+  // }
+  from {
+    color: cyan;
+    transform: translate(0, -10%);
+  }
+
+  to {
+    color: white;
+    transform: translate(0, 0);
+  }
+}
